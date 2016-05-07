@@ -1,0 +1,53 @@
+<style>
+	.right-cloud {
+	    position: absolute;
+	    right: -10%;
+	    top: 10%;
+	    width: 15%;
+	    z-index: 999;
+	    
+	}
+	.left-cloud {
+	    position: absolute;
+	    left: -20%;
+	    bottom: 25%;
+	    width: 15%;
+	    z-index: 999;   
+	}
+</style>
+
+<img src="images/splash-screen1.png" class="background" alt="">	
+<img class="right-cloud" src="images/index-cloud.png" style="width: 15%;">
+
+<a onclick="go_home()">
+	<img src="images/index-main-logo.png" class="main-logo" alt="">
+</a>
+<img class="left-cloud" src="images/index-cloud.png" style="width: 15%;">
+
+<script type="text/javascript">
+	$(document).ready(function () {
+
+        function repeat() {
+			$('.right-cloud').animate({
+			  right: '100%'
+			}, 3000);
+			$('.right-cloud').delay(600).animate({
+			  right: '-10%'
+			}, 3000);
+
+			$('.left-cloud').animate({
+			  left: '100%'
+			}, 3000);
+
+			$('.left-cloud').delay(600).animate({
+			  left:'-10%'
+			 },3000
+			 ,function() {
+			 repeat();
+			});
+        }
+        
+        repeat(); 
+	});
+</script>
+

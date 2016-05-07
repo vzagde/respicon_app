@@ -1,0 +1,61 @@
+
+<div w3-include-html="menu.html"></div>
+
+<!-- HTML for Header -->
+<div class="mobile-grid-100 tablet-grid-100 header padd0">
+	<div class="mobile-grid-20 menu-bt">
+		<img src="images/menu-btn.png" class="menu-btn">
+	</div>
+	<div class="mobile-grid-50 title">
+		<h1>About Mumbai</h1>
+	</div>
+	<div class="mobile-grid-30 padd0 icons">
+		<div class="mobile-grid-100 padd0">
+			<div class="mobile-grid-33 notification padd0">
+				<img src="images/notification-icon.png">
+			</div>
+			<div class="mobile-grid-33 attachment padd0">
+				<img src="images/attachment-icon.png">
+			</div>
+			<div class="mobile-grid-33 search padd0">
+				<img src="images/search-icon.png">
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- End of HTML for Header -->
+
+
+
+<div class="mobile-grid-100 padd0 about-logo" style="margin-top:21%;">
+	<img src="images/about-logo.png">
+</div>
+<hr/>
+<div class="mobile-grid-100 about-title">
+	<h4>ncpcc 2016</h4>
+</div>
+<div class="mobile-grid-90 mobile-prefix-5 about-para">
+	<a onclick="loadView('best-places.html')">
+		<img width="70%" class="mumbai-image1" src="images/Gateway_of_India-1.jpg" alt="">
+	</a>
+	<br><br>
+	<a onclick="loadView('best-food-places.html')">
+		<img width="70%" class="mumbai-image1" src="images/food-1.jpg" alt="">
+	</a>
+</div>
+
+
+<script src="js/menu.js"></script>
+<script>
+
+	$('.menu-btn').click(function(){
+      console.log('fadein');
+      $('.menu-detail').fadeIn();
+    }); 
+    $('.menu-btn-rotate').click(function(){
+        console.log('fadeout');
+        $('.menu-detail').fadeOut();
+    });
+</script>
+

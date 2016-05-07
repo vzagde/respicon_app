@@ -1,0 +1,146 @@
+
+<div w3-include-html="menu.html"></div>
+
+<!-- HTML for Header -->
+		<div class="mobile-grid-100 tablet-grid-100 header padd0">
+			<div class="mobile-grid-20 menu-bt">
+				<img src="images/menu-btn.png" class="menu-btn">
+			</div>
+			<div class="mobile-grid-50 title">
+				<h1>CME-11th November</h1>
+			</div>
+			<div class="mobile-grid-30 padd0 icons">
+				<div class="mobile-grid-100 padd0">
+					<div class="mobile-grid-33 notification padd0">
+						<img src="images/notification-icon.png">
+					</div>
+					<div class="mobile-grid-33 attachment padd0">
+						<img src="images/attachment-icon.png">
+					</div>
+					<div class="mobile-grid-33 search padd0">
+						<img src="images/search-icon.png">
+					</div>
+				</div>
+
+			</div>
+		</div>
+<!-- End of HTML for Header -->
+
+
+
+		<div class="mobile-grid-100  padd0 " style="margin-top:25%;">
+		<div class="accordion" style="padding-top: 10%;">
+            <dl>
+              <dt>
+                <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Basic CME- Critical Care Issues in 
+Everyday Pediatric Practice</a>
+              </dt>
+              <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
+                	<div class="mobile-grid-90 mobile-prefix-5" style="padding-top:5%;">
+		               	<h5>Convenors</h5>
+		               	<p>Dr. Anand Shandilya, Dr. Rajesh Chokhani</p>
+		               	<h5>Coordinators</h5>
+		               	<p>Dr. Arun Bansal, Dr. Anjul Dayal</p>
+		               	<h5>Highlights</h5>
+		               	<p>This CME is targeted for pediatricians who encounter critical care issues in the emergency or ward set-up. The aim is to find solutions that work at clinic and nursing home level in cities, districts and smaller towns. Many common issues like sepsis, trauma, shock, respiratory failure and electrolyte imbalance will be discussed in detail with a case-based protocolised approach easily applicable for your day-to-day practice.</p>
+	               	</div>
+              </dd>
+              <dt>
+                <a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionTitle js-accordionTrigger">
+Advanced CME - Dialogue & Discussion of Issues in Critical Care 
+Management</a>
+              </dt>
+              <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
+               		<div class="mobile-grid-90 mobile-prefix-5" style="padding-top:5%;">
+		               	<h5>Convenors</h5>
+		               	<p>Dr. Madhu Otiv, Dr. Preetha Joshi</p>
+		               	<h5>Coordinators</h5>
+		               	<p>Dr. Vishal Baldua</p>
+		               	<h5>Highlights</h5>
+		               	<p>The advanced CME at the NCPCC 2016 is primarily targeted at practicing Intensivists, critical care fellows & leading pediatricians providing tertiary level care to the sickest children in the community .The CME will include panel discussions triggered off by various system-specific case presentations from leading units in the country and would involve tackling diagnostic and therapeutic dilemmas therein. The panelists themselves would include key opinion leaders and leading experts from India.Giving this discussion an international perspective would be globally recognized stalwarts such as Mark Rogers, Brian Kavanagh, Peter Cox & Timothy Bunchman amongst others.The CME would attempt to bridge knowledge gaps and get leaders to share their experience, thereby providing different views and ways of dealing with the same problems.The CME is being framed in such a way that each and everyone would get a chance to interact freely and voice their opinions.The CME promises to be an enriching activity that would most certainly give you take home messages and enable you to implement new and innovative strategies in your intensive care practice, especially for those situations where you are ‘stuck’.</p>
+	               	</div>
+              </dd>
+            </dl>
+          </div>
+
+		</div>
+
+		
+				
+	</div>
+	
+<script src="js/menu.js"></script>
+<script>
+	
+	$('.menu-btn').click(function(){
+      console.log('fadein');
+      $('.menu-detail').fadeIn();
+    }); 
+    $('.menu-btn-rotate').click(function(){
+        console.log('fadeout');
+        $('.menu-detail').fadeOut();
+    });
+</script>
+
+	<script type="text/javascript">
+		(function(){
+	var d = document,
+	accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+	setAria,
+	setAccordionAria,
+	switchAccordion,
+  touchSupported = ('ontouchstart' in window),
+  pointerSupported = ('pointerdown' in window);
+  
+  skipClickDelay = function(e){
+    e.preventDefault();
+    e.target.click();
+  }
+
+		setAriaAttr = function(el, ariaType, newProperty){
+		el.setAttribute(ariaType, newProperty);
+	};
+	setAccordionAria = function(el1, el2, expanded){
+		switch(expanded) {
+      case "true":
+      	setAriaAttr(el1, 'aria-expanded', 'true');
+      	setAriaAttr(el2, 'aria-hidden', 'false');
+      	break;
+      case "false":
+      	setAriaAttr(el1, 'aria-expanded', 'false');
+      	setAriaAttr(el2, 'aria-hidden', 'true');
+      	break;
+      default:
+				break;
+		}
+	};
+//function
+switchAccordion = function(e) {
+  console.log("triggered");
+	e.preventDefault();
+	var thisAnswer = e.target.parentNode.nextElementSibling;
+	var thisQuestion = e.target;
+	if(thisAnswer.classList.contains('is-collapsed')) {
+		setAccordionAria(thisQuestion, thisAnswer, 'true');
+	} else {
+		setAccordionAria(thisQuestion, thisAnswer, 'false');
+	}
+  	thisQuestion.classList.toggle('is-collapsed');
+  	thisQuestion.classList.toggle('is-expanded');
+		thisAnswer.classList.toggle('is-collapsed');
+		thisAnswer.classList.toggle('is-expanded');
+ 	
+  	thisAnswer.classList.toggle('animateIn');
+	};
+	for (var i=0,len=accordionToggles.length; i<len; i++) {
+		if(touchSupported) {
+      accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+    }
+    if(pointerSupported){
+      accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+    }
+    accordionToggles[i].addEventListener('click', switchAccordion, false);
+  }
+})();
+</script>
+

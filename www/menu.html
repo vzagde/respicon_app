@@ -1,0 +1,161 @@
+
+<div class="mobile-grid-100 menu-detail display-not">
+	<div class="mobile-grid-20 menu-top">
+		<img src="images/menu-btn.png" class="menu-btn-rotate">
+	</div>
+	
+	<div class="mobile-grid-80  padd0 menu"  style="overflow: scroll; height: 550px">
+		<div class="mobile-grid-100 user-image">
+			<img src="images/user.png" alt="">
+			<span class="user-logo-name">Hello User!</span>
+		</div>
+		<div class="mobile-grid-100  menu-list" id="register_menu">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/registration-icon.png">
+			</div>
+			<div class="mobile-grid-80 padd0  menu-title">
+				<a onclick="loadView('register.html')"> <span class="left">Registeration Details</span> </a>
+			</div>
+		</div>
+		<div class="mobile-grid-100 menu-lists">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/brochure-icon.png">
+			</div>
+			<div class="mobile-grid-80  menu-title">
+				<a onclick="loadView('brochure.html')"><span class="left">Brochure</span> </a>
+			</div>
+		</div>
+		<div class="mobile-grid-100 menu-lists">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/workshop-icon.png">
+			</div>
+			<div class="mobile-grid-80  menu-title">
+				<a onclick="loadView('delegate-list.html')"> <span class="left">Delegates List</span> </a>
+			</div>
+		</div>
+		<div class="mobile-grid-100 menu-lists">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/accomodation-icon.png">
+			</div>
+			<div class="mobile-grid-80 padd0  menu-title">
+				<a onclick="loadView('accomodation-status.html')"> <span class="left">Accomodation Status</span> </a>
+			</div>
+		</div>
+		<!-- <div class="mobile-grid-100 menu-lists">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/team-icon.png">
+			</div>
+			<div class="mobile-grid-80  menu-title">
+				<a onclick="loadView('committee.html')"> <span class="left">Committee</span> </a>
+			</div>
+		</div> -->
+		<div class="mobile-grid-100 menu-lists">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/team-icon.png">
+			</div>
+			<div class="mobile-grid-80  menu-title">
+				<a onclick="loadView('organising-team.html')"> <span class="left">Organizing Team</span> </a>
+			</div>
+		</div>
+		<div class="mobile-grid-100 menu-lists">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/faculty-icon.png">
+			</div>
+			<div class="mobile-grid-80  menu-title">
+				<a onclick="loadView('faculty-list.html')"> <span class="left">Faculty List</span> </a>
+			</div>
+		</div>
+		<div class="mobile-grid-100 menu-lists">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/scientific-icon.png">
+			</div>
+			<div class="mobile-grid-80 menu-title">
+				<!-- <a onclick="loadView('scientific-program.html')">
+					<span class="left">Scientific Program</span>
+				</a> -->
+				<a onclick="toggle()">
+					<span class="left">Scientific Program <img class="sub-menu-icon" src="images/chevron-down.png" style="width: 16px;" alt=""></span>
+				</a>
+				<ul class="sub-menu">
+					<li class="menu-title">
+						<a onclick="loadView('grid-workshop.html')">
+							<img src="images/dot.png" alt="" style="position: absolute;left: 28%;width: 3%;"><span>Workshop:10th Nov</span>
+						</a>
+					</li>
+					<li class="menu-title">
+						<a onclick="loadView('cme-11.html')">
+							<img src="images/dot.png" alt="" style="position: absolute;left: 28%;width: 3%;"><span>CME:11th Nov</span>
+						</a>
+					</li>
+					<li class="menu-title">
+						<a onclick="loadView('conference-12.html')">
+							<img src="images/dot.png" alt="" style="position: absolute;left: 28%;width: 3%;"><span>Conference 12th-13th Nov</span>
+						</a>
+					</li>
+					<li class="menu-title">
+						<a onclick="loadView('abstract-submission.html')">
+							<img src="images/dot.png" alt="" style="position: absolute;left: 28%;width: 3%;"><span>Abstract Submission</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="mobile-grid-100 menu-lists">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/exhibition-icon.png">
+			</div>
+			<div class="mobile-grid-80  menu-title">
+				<a onclick="loadView('exhibitors-list.html')"> <span class="left">Exhibitors List</span> </a>
+			</div>
+		</div>
+		<div class="mobile-grid-100 menu-lists">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/venue-icon.png">
+			</div>
+			<div class="mobile-grid-80  menu-title">
+				<a onclick="loadView('venue.html')"> <span class="left">Venue Layout</span> </a>
+			</div>
+		</div>
+		<div class="mobile-grid-100 menu-lists">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/mumbai-icon.png">
+			</div>
+			<div class="mobile-grid-80  menu-title">
+				<a onclick="loadView('about-mumbai.html')"> <span class="left">About Mumbai</span> </a>
+			</div>
+		</div>
+		<div class="mobile-grid-100 menu-lists">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/call-icon.png">
+			</div>
+			<div class="mobile-grid-80  menu-title">
+				<a onclick="loadView('contactus.html')"> <span class="left">Contact Us</span> </a>
+			</div>
+		</div>
+		<div class="mobile-grid-100 menu-lists">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/chat-icon.png">
+			</div>
+			<div class="mobile-grid-80  menu-title">
+				<a onclick="loadView('chat.html')"> <span class="left">Chat/Quiz</span> </a>
+			</div>
+		</div>
+		<div class="mobile-grid-100 menu-lists">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/keypad-icon.png">
+			</div>
+			<div class="mobile-grid-80  menu-title">
+				<a onclick="loadView('Keypad.html')"> <span class="left">Keypad Session</span> </a>
+			</div>
+		</div>
+		<div class="mobile-grid-100 menu-lists">
+			<div class="mobile-grid-20  menu-icon">
+				<img src="images/menu-notification-icon.png">
+			</div>
+			<div class="mobile-grid-80  menu-title">
+				<a onclick="loadView('notification-page.html')"> <span class="left">Notification</span> </a>
+			</div>
+		</div>
+		<br><br>
+	</div>
+</div>

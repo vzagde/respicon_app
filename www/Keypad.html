@@ -1,0 +1,45 @@
+<div w3-include-html="menu.html"></div>
+
+<!-- HTML for Header -->
+<div class="mobile-grid-100 tablet-grid-100 header padd0">
+	<div class="mobile-grid-20 menu-bt">
+		<img src="images/menu-btn.png" class="menu-btn">
+	</div>
+	<div class="mobile-grid-50 title">
+		<h1>Keypad</h1>
+	</div>
+	<div class="mobile-grid-30 padd0 icons">
+		<div class="mobile-grid-100 padd0">
+			<div class="mobile-grid-33 notification padd0">
+				<img src="images/notification-icon.png">
+			</div>
+			<div class="mobile-grid-33 attachment padd0">
+				<img src="images/attachment-icon.png">
+			</div>
+			<div class="mobile-grid-33 search padd0">
+				<img src="images/search-icon.png">
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- End of HTML for Header -->
+
+
+
+<div class="mobile-grid-90 mobile-prefix-5 about-para">
+	<h1 style="font-family:'latomedium'; font-size: 2.5em; margin-top: 30%;">Coming Soon</h1>
+</div>
+
+<script src="js/menu.js"></script>
+<script>
+
+	$('.menu-btn').click(function(){
+      console.log('fadein');
+      $('.menu-detail').fadeIn();
+    }); 
+    $('.menu-btn-rotate').click(function(){
+        console.log('fadeout');
+        $('.menu-detail').fadeOut();
+    });
+</script>

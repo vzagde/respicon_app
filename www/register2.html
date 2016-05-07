@@ -1,0 +1,93 @@
+
+<div w3-include-html="menu.html"></div>
+<!-- HTML for Header -->
+	<div class="mobile-grid-100 tablet-grid-100 header padd0">
+		<div class="mobile-grid-20 menu-bt">
+			<img src="images/menu-btn.png" class="menu-btn">
+		</div>
+		<div class="mobile-grid-50 title">
+			<h1>register</h1>
+		</div>
+		<div class="mobile-grid-30 padd0 icons">
+			<div class="mobile-grid-100 padd0">
+				<div class="mobile-grid-33 notification padd0">
+					<img src="images/notification-icon.png">
+				</div>
+				<div class="mobile-grid-33 attachment padd0">
+					<img src="images/attachment-icon.png">
+				</div>
+				<div class="mobile-grid-33 search padd0">
+					<img src="images/search-icon.png">
+				</div>
+			</div>
+
+		</div>
+	</div>
+<!-- End of HTML for Header -->
+
+
+	<div class="mobile-grid-100 padd0" style="margin-top:19%;">
+		<div class="complete-register-text">
+			<p>Click here to complete <br/>
+			   your registeration</p>
+		</div>
+		<div class="complete-register-btn">
+			<img class="register-btn" src="images/register-btn.png" alt="Redirect to website">
+		</div>
+		
+	</div>
+	
+</div>
+<script>
+	(function () {
+
+		myHTMLInclude();
+
+		function myHTMLInclude() {
+		  var z, i, a, file, xhttp;
+		  z = document.getElementsByTagName("*");
+		  for (i = 0; i < z.length; i++) {
+		    if (z[i].getAttribute("w3-include-html")) {
+		      a = z[i].cloneNode(false);
+		      file = z[i].getAttribute("w3-include-html");
+		      var xhttp = new XMLHttpRequest();
+		      xhttp.onreadystatechange = function() {
+		        if (xhttp.readyState == 4 && xhttp.status == 200) {
+		          a.removeAttribute("w3-include-html");
+		          a.innerHTML = xhttp.responseText;
+		          z[i].parentNode.replaceChild(a, z[i]);
+		          myHTMLInclude();
+		        }
+		      }      
+		      xhttp.open("GET", file, false);
+		      xhttp.send();
+		      return;
+		    }
+		  }
+		}
+
+	})();
+
+	$('.menu-btn').click(function(){
+      console.log('fadein');
+      $('.menu-detail').fadeIn();
+    }); 
+    $('.menu-btn-rotate').click(function(){
+        console.log('fadeout');
+        $('.menu-detail').fadeOut();
+    });
+
+	$('.complete-register-btn').click(function(event) {
+		// window.open('http://google.com', '_system');
+		console.log('in');
+		try {
+		    // window.open('http://apache.org', '_blank', 'location=yes');
+			window.open('http://ncpcc2016.com/PaymentGateway/form/event_main.php?event_id=4', '_system');
+			// navigator.app.loadUrl("http://google.com", {openExternal : true});
+		} catch(err) {
+		    console.log(err.message);
+		}
+
+		console.log('out');
+	});
+</script>

@@ -1,0 +1,82 @@
+
+
+		<div w3-include-html="menu.html"></div>
+
+		<div class="mobile-grid-100 tablet-grid-100 padd0 header">
+			<div class="mobile-grid-20 menu-bt">
+				<img src="images/menu-btn.png" class="menu-btn">
+			</div>
+			<div class="mobile-grid-50 title">
+				<h1>venue</h1>
+			</div>
+			<div class="mobile-grid-30 padd0 icons">
+				<div class="mobile-grid-100 padd0">
+					<div class="mobile-grid-33 padd0 notification">
+						<img src="images/notification-icon.png">
+					</div>
+					<div class="mobile-grid-33 padd0 attachment">
+						<img src="images/attachment-icon.png">
+					</div>
+					<div class="mobile-grid-33 padd0 search">
+						<img src="images/search-icon.png">
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="mobile-grid-100 padd0">
+			 <div id="map" style="width:100%; height:200px;" />
+		</div>
+		<div class="mobile-grid-100 padd0 map-info">
+		<div class="mobile-grid-20">
+			<img src="images/map-icon.png">
+		</div>
+		<div class="mobile-grid-80 address">
+			<p>GRAND HYATT MUMBAI<br>
+				Off Western Express Highway<br>
+				Santacruz East<br>
+				Mumbai 400 055<br>
+				India<br><br>
+
+				Tel +91 22 6676 1234</p>
+
+		</div>
+		</div>
+		
+	<script src="js/menu.js"></script>
+    <script>
+
+		$('.menu-btn').click(function(){
+	      console.log('fadein');
+	      $('.menu-detail').fadeIn();
+	    }); 
+	    $('.menu-btn-rotate').click(function(){
+	        console.log('fadeout');
+	        $('.menu-detail').fadeOut();
+	    });
+    </script>
+    
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQmvzUcXlKEXxaviRSMea8fpjbpx0q3Hw&libraries=visualization&callback=initMap">
+    </script>
+    <script type="text/javascript">
+    	// window.onload = function() {
+    	function initMap() {
+	    	var myOptions = {
+		        center: new google.maps.LatLng(19.0773939, 72.8492312),
+		        zoom: 18,
+		        mapTypeId: google.maps.MapTypeId.ROADMAP,
+		        disableDefaultUI: true
+			};
+
+		    var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+		    var marker = new google.maps.Marker({
+			    position: {lat: 19.0773939, lng: 72.8492312},
+			    map: map,
+			    title: 'Hello World!'
+			  });
+		}
+		// }
+    </script>

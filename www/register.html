@@ -1,0 +1,151 @@
+<div w3-include-html="menu.html"></div>
+
+	<div class="mobile-grid-100 tablet-grid-100 padd0 header">
+		<div class="mobile-grid-20 menu-bt">
+			<img src="images/menu-btn.png" class="menu-btn" style="display: none">
+		</div>
+		<div class="mobile-grid-50 title">
+			<h1>App Register</h1>
+		</div>
+		<div class="mobile-grid-30 padd0 icons">
+			<div class="mobile-grid-100 padd0">
+				<div class="mobile-grid-33 padd0 notification">
+					<img src="images/notification-icon.png">
+				</div>
+				<div class="mobile-grid-33 padd0 attachment">
+					<img src="images/attachment-icon.png">
+				</div>
+				<div class="mobile-grid-33 padd0 search">
+					<img src="images/search-icon.png">
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="mobile-grid-100 padd0" style="margin-top:19%;">
+		<input type="text" id="name" name="name" placeholder="Name" class="text">
+		<input type="text" id="email" name="email" placeholder="Email" class="text">
+		<input type="text" id="phone" name="phone" placeholder="Phone" class="text">
+		<input type="text" id="city" name="city" placeholder="City" class="text">
+		<input type="text" id="pin" name="pin" placeholder="PIN Code" class="text">
+		<div class="mobile-grid-100 submt-btn">submit</div>
+		<div class="mobile-grid-100 reset-btn">reset</div>
+	</div>
+
+<script src="js/menu.js"></script>
+<script>
+	
+	$('.menu-btn').click(function(){
+      console.log('fadein');
+      $('.menu-detail').fadeIn();
+   }); 
+   $('.menu-btn-rotate').click(function(){
+        console.log('fadeout');
+        $('.menu-detail').fadeOut();
+   });
+   
+	$('.submt-btn').click(function(event) {
+		console.log('in submit');
+
+		var pin_preg = /^\d{6}$/;
+        var phone_preg = /^\d{10}$/;
+        var email_preg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+		var name = $('#name').val();
+		var email = $('#email').val();
+		var phone = $('#phone').val();
+		var city = $('#city').val();
+		var pin = $('#pin').val();
+		if (name=='') {
+			// alert('please, enter a name.');
+			navigator.notification.alert(
+			    'please, enter a name.',  // message
+			    alertDismissed,         // callback
+			    'Error',            // title
+			    'Ok'                  // buttonName
+			);
+			return;
+		} else if (city=='') {
+			// alert('please, enter a city.');
+			navigator.notification.alert(
+			    'please, enter a city.',  // message
+			    alertDismissed,         // callback
+			    'Error',            // title
+			    'Ok'                  // buttonName
+			);
+			return;
+		} else if (!pin.match(pin_preg)) {
+			// alert('please, enter a valid pin.');
+			navigator.notification.alert(
+			    'please, enter a valid pin.',  // message
+			    alertDismissed,         // callback
+			    'Error',            // title
+			    'Ok'                  // buttonName
+			);
+			return;
+		} else if (!email.match(email_preg)) {
+			// alert('please, enter a valid email.');
+			navigator.notification.alert(
+			    'please, enter a valid email.',  // message
+			    alertDismissed,         // callback
+			    'Error',            // title
+			    'Ok'                  // buttonName
+			);
+
+			return;
+		} else if (!phone.match(phone_preg)) {
+			alert('please, enter a valid phone');
+			navigator.notification.alert(
+			    'please, enter a valid phone.',  // message
+			    alertDismissed,         // callback
+			    'Error',            // title
+			    'Ok'                  // buttonName
+			);
+
+			return;
+		} else {
+			// validation succed
+			$.ajax({
+				url: 'http://casaestilo.in/respicon_app/respicon_admin/api/register_user',
+				type: 'POST',
+				dataType: 'JSON',
+				crossDomain : true,
+				data: {
+					name: name,
+					email: email,
+					phone: phone,
+					city: city,
+					pin: pin,
+				},
+			})
+			.done(function(data) {
+				console.log("success");
+				// window.location="register2.html";
+				loadView('brochure.html');
+				$('.user-logo-name').html('hello '+name);
+				Lockr.set('registered', 'true');
+				Lockr.set('name', name);
+			})
+			.fail(function() {
+				console.log("error");
+			})
+			.always(function() {
+				console.log("complete");
+			});
+		}
+		reset_form();
+	});
+
+	$('.reset-btn').click(function(event) {
+		reset_form();
+	});
+
+	function reset_form () {
+		$('#name').val('');
+		$('#email').val('');
+		$('#phone').val('');
+		$('#city').val('');
+		$('#pin').val('');
+	}
+</script>

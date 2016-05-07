@@ -1,0 +1,87 @@
+
+
+	<div w3-include-html="menu.html"></div>
+
+<!-- HTML for Header -->
+		<div class="mobile-grid-100 tablet-grid-100 header padd0">
+			<div class="mobile-grid-20 menu-bt" onclick="backView()">
+				<img src="images/back-arrow.png" style="width:50%;">
+			</div>
+			<div class="mobile-grid-50 title">
+				<h1>about mumbai</h1>
+			</div>
+			<div class="mobile-grid-30 padd0 icons">
+				<div class="mobile-grid-100 padd0">
+					<div class="mobile-grid-33 notification padd0">
+						<img src="images/notification-icon.png">
+					</div>
+					<div class="mobile-grid-33 attachment padd0">
+						<img src="images/attachment-icon.png">
+					</div>
+					<div class="mobile-grid-33 search padd0">
+						<img src="images/search-icon.png">
+					</div>
+				</div>
+
+			</div>
+		</div>
+<!-- End of HTML for Header -->
+
+
+
+		<div class="mobile-grid-100 padd0 about-logo" style="margin-top:21%;">
+			<img src="images/about-logo.png">
+		</div>
+		<hr/>
+		<div class="mobile-grid-100 about-title">
+			<h4>Best 10 Food Places in Mumbai</h4>
+		</div>
+		<div class="mobile-grid-90 mobile-prefix-5 about-para">
+			<ul class="mobile-grid-100">
+				<li style="font-size: 1em;">
+					<a href="http://www.indigodeli.com/" target="_blank">
+						Indigo Delicatessen, various locations
+					</a>
+				</li>
+				<li style="font-size: 1em;"><a href="https://www.zomato.com/mumbai/lings-pavilion-colaba" target="_blank">Ling's Pavilion, Colaba</a></li>
+				<li style="font-size: 1em;"><a href="http://www.sofitel.com/" target="_blank">Sofitel, BKC</a></li>
+				<li style="font-size: 1em;"><a href="http://thetable.in/" target="_blank">The Table, Colaba</a></li>
+				<li style="font-size: 1em;"><a href="http://madeinpunjab.co.in/" target="_blank">Made in Punjab, Malad West</a></li>
+				<li style="font-size: 1em;"><a href="http://www.saltwatercafe.in/" target="_blank">Salt Water Cafe, Bandra/Churchgate</a></li>
+				<li style="font-size: 1em;"><a href="http://whiteowl.in/" target="_blank">The White Owl, Lower Parel</a></li>
+				<li style="font-size: 1em;"><a href="https://www.zomato.com/mumbai/imbiss-colaba" target="_blank">Imbiss, Bandra/Colaba</a></li>
+				<li style="font-size: 1em;"><a href="https://www.zomato.com/sydney/macchiato-cbd?adref=2602000-16558391-000002&amp;gclid=CMni-Mj-7soCFdYSaAod_7sCww" target="_blank">Macchiato Pizzeria Grill &amp; Bar, CBD</a></li>
+				<li style="font-size: 1em;"><a href="https://www.zomato.com/mumbai/naaz-hotel-kurla" target="_blank">Naaz Hotel, Kurla</a></li>
+			</ul>
+	<style>
+		.mumbai-images {
+    		width: 100%;
+		}
+		.about-para ul {
+			list-style-type: none;
+		}
+		.about-para li {
+			width: 100%;
+			text-align: left;
+			margin-bottom: 10%;
+		}
+		.about-para li a{
+			width: 100%;
+			color: #000;
+			font-family: 'ubunturegular';
+    		font-size: 1em;
+		}
+	</style>
+
+<script src="js/menu.js"></script>
+<script>
+	
+	$('.menu-btn').click(function(){
+      console.log('fadein');
+      $('.menu-detail').fadeIn();
+    }); 
+    $('.menu-btn-rotate').click(function(){
+        console.log('fadeout');
+        $('.menu-detail').fadeOut();
+    });
+</script>

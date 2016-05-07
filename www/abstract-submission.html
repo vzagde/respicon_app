@@ -1,0 +1,175 @@
+
+<div w3-include-html="menu.html"></div>
+
+<!-- HTML for Header -->
+		<div class="mobile-grid-100 tablet-grid-100 header padd0">
+			<div class="mobile-grid-20 menu-bt">
+				<img src="images/menu-btn.png" class="menu-btn">
+			</div>
+			<div class="mobile-grid-50 title">
+				<h1>CME-11th November</h1>
+			</div>
+			<div class="mobile-grid-30 padd0 icons">
+				<div class="mobile-grid-100 padd0">
+					<div class="mobile-grid-33 notification padd0">
+						<img src="images/notification-icon.png">
+					</div>
+					<div class="mobile-grid-33 attachment padd0">
+						<img src="images/attachment-icon.png">
+					</div>
+					<div class="mobile-grid-33 search padd0">
+						<img src="images/search-icon.png">
+					</div>
+				</div>
+
+			</div>
+		</div>
+<!-- End of HTML for Header -->
+
+
+
+		<div class="mobile-grid-100  padd0 " style="margin-top:25%;">
+		<div class="accordion" style="padding-top: 10%;">
+            <dl>
+              <dt>
+                <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">
+                	Guidelines For Abstract Submission
+                </a>
+              </dt>
+              <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
+                	<div class="mobile-grid-90 mobile-prefix-5 abstrct">
+<b>Abstract of scientific papers are invited for the NCPCC 2016. <br>
+The details are as follows. </b><br>
+
+<b>Types of Study</b> Both case studies and original research may be presented for posters & or free oral papers. However for free oral papers greater weightage will be given for original research studies. <br>
+
+<b>Word File Submission</b> Please use the Word file Template attached for submission of the abstract. The template has 2 parts. Page 1 is personal details correspondence details & authors list. Page 2 has only the title and the main body of the abstract without names institution of the authors to facilitate blinded peer review of the abstract. <br>
+
+<b>Word Limit</b> The main body of the abstract should be within 250 words single spaced. <br>
+
+<b>Font Type</b> Abstract should be prepared in the given Microsoft Word Template Arial 12 size font with single line spacing typeface with the title in boldface. Do not use all capitals letters. <br>
+
+<b>Tables</b> Abstract should not include tables. <br>
+
+<b>Graphs & Images</b> Abstract should not include graphs and images. <br>
+
+<b>General Instructions</b> It is the author’s responsibility to submit a correct abstract. Any errors in spelling grammar or cientific fact will be reproduced as typed by the author. Do not begin sentences with numerals. Standard abbreviations may be used in the abstract without definition. <br>
+
+<b>Review</b> The scientific committee will review the abstracts and decide the section of presentation poster oral. Registration by the presenting author is mandatory prior to abstract submission. <br>
+
+<b>Time Lines</b> Last date for submission of abstract is 15th August 2016. Notification of acceptance of abstract submitted will be sent by e mail only to the presenting  corresponding author on the e mail as given by the authors on or before 10th October 2016. <br>
+
+<b>Submission</b> The abstract submitted online shall only be accepted at email ncpcc2016@gmail.com. No other forms of submission like hard copies fax etc shall be accepted.The soft copy file should be named starting with registration number of the presenting author followed by surname followed by ncpcc2016.doc. In the subject line please write “abstract” . <br>
+
+<b>For clarifications details please contact </b><br>
+
+<b>ncpcc2016@gmail.com attn Dr. Milind Tullu &  Dr.Preeti Shanbag </b><br>
+
+<b>Details of the Abstract File</b> <br>
+
+<b>Page 1 of Abstract File</b> This page has details of the authors the title of the paper presenting author abstract word count email of corresponding author etc and should be in the given format template provided for ease of review. <br>
+
+<b>Page 2 of Abstract File</b> This is the main body of the abstract text 250 words. This page should not have any information identifying the authors or their institution. Abstract should be structured & organized to include the following sections. <br>
+
+<b>Background  Rationale & Aims</b> Indicate the purpose and objective of the research the hypothesis that was tested or a description of the problem being analyzed or evaluated. <br>
+
+<b>Methods</b> Describe the setting location for the study design study population data collection & methods of analysis used. <br>
+
+<b>Results</b> Present as clearly & detailed as possible the findings outcome of the study with specific results in summarized form. It is not desirable to simply state like “The results will be discussed”. <br>
+
+<b>Discussion</b> The study findings may be correlated with literature evidence. <br>
+
+<b>Conclusion</b> Briefly discuss the data and main outcome of the study. <br>
+	               	</div>
+              </dd>
+              <dt>
+                <a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionTitle js-accordionTrigger">
+                	Abstract Template
+                </a>
+              </dt>
+              <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
+              </dd>
+            </dl>
+          </div>
+
+		</div>
+
+		
+				
+	</div>
+	
+<script src="js/menu.js"></script>
+<script>
+	
+	$('.menu-btn').click(function(){
+      console.log('fadein');
+      $('.menu-detail').fadeIn();
+    }); 
+    $('.menu-btn-rotate').click(function(){
+        console.log('fadeout');
+        $('.menu-detail').fadeOut();
+    });
+</script>
+
+	<script type="text/javascript">
+		(function(){
+	var d = document,
+	accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+	setAria,
+	setAccordionAria,
+	switchAccordion,
+  touchSupported = ('ontouchstart' in window),
+  pointerSupported = ('pointerdown' in window);
+  
+  skipClickDelay = function(e){
+    e.preventDefault();
+    e.target.click();
+  }
+
+		setAriaAttr = function(el, ariaType, newProperty){
+		el.setAttribute(ariaType, newProperty);
+	};
+	setAccordionAria = function(el1, el2, expanded){
+		switch(expanded) {
+      case "true":
+      	setAriaAttr(el1, 'aria-expanded', 'true');
+      	setAriaAttr(el2, 'aria-hidden', 'false');
+      	break;
+      case "false":
+      	setAriaAttr(el1, 'aria-expanded', 'false');
+      	setAriaAttr(el2, 'aria-hidden', 'true');
+      	break;
+      default:
+				break;
+		}
+	};
+//function
+switchAccordion = function(e) {
+  console.log("triggered");
+	e.preventDefault();
+	var thisAnswer = e.target.parentNode.nextElementSibling;
+	var thisQuestion = e.target;
+	if(thisAnswer.classList.contains('is-collapsed')) {
+		setAccordionAria(thisQuestion, thisAnswer, 'true');
+	} else {
+		setAccordionAria(thisQuestion, thisAnswer, 'false');
+	}
+  	thisQuestion.classList.toggle('is-collapsed');
+  	thisQuestion.classList.toggle('is-expanded');
+		thisAnswer.classList.toggle('is-collapsed');
+		thisAnswer.classList.toggle('is-expanded');
+ 	
+  	thisAnswer.classList.toggle('animateIn');
+	};
+	for (var i=0,len=accordionToggles.length; i<len; i++) {
+		if(touchSupported) {
+      accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+    }
+    if(pointerSupported){
+      accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+    }
+    accordionToggles[i].addEventListener('click', switchAccordion, false);
+  }
+})();
+</script>
+
