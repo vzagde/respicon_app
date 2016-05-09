@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.respicon.ncpcc" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Respicon</name>
+    <name>NCPCC - Respicon</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        NCPCC Application
     </description>
     <author email="support@kreaserv.com" href="http://kreaserv.com">
         Kreaserv Team
