@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.respicon.ncpcc" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>NCPCC - Respicon</name>
+<widget id="com.ncpcc.kreaserv" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>NCPCC 2016</name>
     <description>
         NCPCC Application
     </description>
-    <author email="support@kreaserv.com" href="http://kreaserv.com">
-        Kreaserv Team
+    <author email="rajesh@ditranz.com" href="http://ncpcc2016.com/">
+        NCPCC Team
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
