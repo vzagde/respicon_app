@@ -108,17 +108,17 @@
     </platform>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
+<!--     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
+    <allow-intent href="geo:*" /> -->
     <access origin="*" />
      <platform name="android">
-        <allow-intent href="market:*" />
+        <!-- <allow-intent href="market:*" /> -->
     </platform>
     <platform name="ios">
         <!-- <access origin="whatsapp:*" launch-external="yes" /> -->
-        <allow-intent href="market:*" />
+        <!-- <allow-intent href="market:*" /> -->
         <!-- <allow-intent href="itms:*" /> -->
         <!-- <allow-intent href="itms-apps:*" /> -->
     </platform>
